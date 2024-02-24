@@ -13,9 +13,17 @@
 		E1DA1F722B88DFFB00F1CC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA1F702B88DFFB00F1CC35 /* Main.storyboard */; };
 		E1DA1F742B88DFFC00F1CC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DA1F732B88DFFC00F1CC35 /* Assets.xcassets */; };
 		E1DA1F772B88DFFC00F1CC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA1F752B88DFFC00F1CC35 /* LaunchScreen.storyboard */; };
-		E1DA1F822B88DFFD00F1CC35 /* Digii_AssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F812B88DFFD00F1CC35 /* Digii_AssessmentTests.swift */; };
 		E1DA1F8C2B88DFFD00F1CC35 /* Digii_AssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F8B2B88DFFD00F1CC35 /* Digii_AssessmentUITests.swift */; };
 		E1DA1F8E2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F8D2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift */; };
+		E1F78F992B89CAD6008AD5B6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78F982B89CAD6008AD5B6 /* NetworkService.swift */; };
+		E1F78F9B2B89CB37008AD5B6 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78F9A2B89CB37008AD5B6 /* Resource.swift */; };
+		E1F78FA02B89D85B008AD5B6 /* Publisher+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78F9F2B89D85B008AD5B6 /* Publisher+Network.swift */; };
+		E1F78FA32B89E278008AD5B6 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FA22B89E278008AD5B6 /* Photo.swift */; };
+		E1F78FA52B89E34E008AD5B6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FA42B89E34E008AD5B6 /* APIConstants.swift */; };
+		E1F78FA72B89E40F008AD5B6 /* Resource+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FA62B89E40F008AD5B6 /* Resource+Photo.swift */; };
+		E1F78FAA2B89E7DB008AD5B6 /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FA92B89E7DB008AD5B6 /* NetworkServiceTest.swift */; };
+		E1F78FAD2B89FD16008AD5B6 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FAC2B89FD16008AD5B6 /* URLProtocolMock.swift */; };
+		E1F78FB02B8A00A3008AD5B6 /* Photos.json in Resources */ = {isa = PBXBuildFile; fileRef = E1F78FAF2B8A00A3008AD5B6 /* Photos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +53,18 @@
 		E1DA1F762B88DFFC00F1CC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1DA1F782B88DFFC00F1CC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DA1F7D2B88DFFD00F1CC35 /* Digii_AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Digii_AssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1DA1F812B88DFFD00F1CC35 /* Digii_AssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digii_AssessmentTests.swift; sourceTree = "<group>"; };
 		E1DA1F872B88DFFD00F1CC35 /* Digii_AssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Digii_AssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DA1F8B2B88DFFD00F1CC35 /* Digii_AssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digii_AssessmentUITests.swift; sourceTree = "<group>"; };
 		E1DA1F8D2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digii_AssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1F78F982B89CAD6008AD5B6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E1F78F9A2B89CB37008AD5B6 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		E1F78F9F2B89D85B008AD5B6 /* Publisher+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Network.swift"; sourceTree = "<group>"; };
+		E1F78FA22B89E278008AD5B6 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		E1F78FA42B89E34E008AD5B6 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		E1F78FA62B89E40F008AD5B6 /* Resource+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resource+Photo.swift"; sourceTree = "<group>"; };
+		E1F78FA92B89E7DB008AD5B6 /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
+		E1F78FAC2B89FD16008AD5B6 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		E1F78FAF2B8A00A3008AD5B6 /* Photos.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = Photos.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,8 @@
 		E1DA1F692B88DFFB00F1CC35 /* Digii_Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				E1F78FA12B89DA79008AD5B6 /* Models */,
+				E1F78F962B89CA90008AD5B6 /* Services */,
 				E1DA1F6A2B88DFFB00F1CC35 /* AppDelegate.swift */,
 				E1DA1F6C2B88DFFB00F1CC35 /* SceneDelegate.swift */,
 				E1DA1F6E2B88DFFB00F1CC35 /* ViewController.swift */,
@@ -113,7 +131,9 @@
 		E1DA1F802B88DFFD00F1CC35 /* Digii_AssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1DA1F812B88DFFD00F1CC35 /* Digii_AssessmentTests.swift */,
+				E1F78FAE2B8A0051008AD5B6 /* Responses */,
+				E1F78FAB2B89FC3E008AD5B6 /* Mocks */,
+				E1F78FA82B89E77B008AD5B6 /* UnitTests */,
 			);
 			path = Digii_AssessmentTests;
 			sourceTree = "<group>";
@@ -125,6 +145,58 @@
 				E1DA1F8D2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift */,
 			);
 			path = Digii_AssessmentUITests;
+			sourceTree = "<group>";
+		};
+		E1F78F962B89CA90008AD5B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78F972B89CA99008AD5B6 /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E1F78F972B89CA99008AD5B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78F982B89CAD6008AD5B6 /* NetworkService.swift */,
+				E1F78F9A2B89CB37008AD5B6 /* Resource.swift */,
+				E1F78F9F2B89D85B008AD5B6 /* Publisher+Network.swift */,
+				E1F78FA42B89E34E008AD5B6 /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E1F78FA12B89DA79008AD5B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78FA22B89E278008AD5B6 /* Photo.swift */,
+				E1F78FA62B89E40F008AD5B6 /* Resource+Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1F78FA82B89E77B008AD5B6 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78FA92B89E7DB008AD5B6 /* NetworkServiceTest.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		E1F78FAB2B89FC3E008AD5B6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78FAC2B89FD16008AD5B6 /* URLProtocolMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E1F78FAE2B8A0051008AD5B6 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78FAF2B8A00A3008AD5B6 /* Photos.json */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +270,7 @@
 					};
 					E1DA1F7C2B88DFFD00F1CC35 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = E1DA1F662B88DFFB00F1CC35;
 					};
 					E1DA1F862B88DFFD00F1CC35 = {
@@ -241,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F78FB02B8A00A3008AD5B6 /* Photos.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F78FA32B89E278008AD5B6 /* Photo.swift in Sources */,
 				E1DA1F6F2B88DFFB00F1CC35 /* ViewController.swift in Sources */,
+				E1F78FA02B89D85B008AD5B6 /* Publisher+Network.swift in Sources */,
 				E1DA1F6B2B88DFFB00F1CC35 /* AppDelegate.swift in Sources */,
+				E1F78F992B89CAD6008AD5B6 /* NetworkService.swift in Sources */,
+				E1F78FA52B89E34E008AD5B6 /* APIConstants.swift in Sources */,
+				E1F78FA72B89E40F008AD5B6 /* Resource+Photo.swift in Sources */,
+				E1F78F9B2B89CB37008AD5B6 /* Resource.swift in Sources */,
 				E1DA1F6D2B88DFFB00F1CC35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +348,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DA1F822B88DFFD00F1CC35 /* Digii_AssessmentTests.swift in Sources */,
+				E1F78FAA2B89E7DB008AD5B6 /* NetworkServiceTest.swift in Sources */,
+				E1F78FAD2B89FD16008AD5B6 /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +585,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F298F366M8;
@@ -513,6 +595,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shreyansh.Digii-AssessmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Digii_Assessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Digii_Assessment";
@@ -524,6 +607,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F298F366M8;
