@@ -15,6 +15,9 @@
 		E1DA1F772B88DFFC00F1CC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA1F752B88DFFC00F1CC35 /* LaunchScreen.storyboard */; };
 		E1DA1F8C2B88DFFD00F1CC35 /* Digii_AssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F8B2B88DFFD00F1CC35 /* Digii_AssessmentUITests.swift */; };
 		E1DA1F8E2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F8D2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift */; };
+		E1E3132E2B8AF52900BB15E7 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E3132D2B8AF52900BB15E7 /* NetworkServiceMock.swift */; };
+		E1E313312B8AFA1000BB15E7 /* PhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E313302B8AFA1000BB15E7 /* PhotosUseCase.swift */; };
+		E1E313332B8B059E00BB15E7 /* PhotosUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E313322B8B059E00BB15E7 /* PhotosUseCaseTest.swift */; };
 		E1F78F992B89CAD6008AD5B6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78F982B89CAD6008AD5B6 /* NetworkService.swift */; };
 		E1F78F9B2B89CB37008AD5B6 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78F9A2B89CB37008AD5B6 /* Resource.swift */; };
 		E1F78FA02B89D85B008AD5B6 /* Publisher+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78F9F2B89D85B008AD5B6 /* Publisher+Network.swift */; };
@@ -24,6 +27,9 @@
 		E1F78FAA2B89E7DB008AD5B6 /* NetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FA92B89E7DB008AD5B6 /* NetworkServiceTest.swift */; };
 		E1F78FAD2B89FD16008AD5B6 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FAC2B89FD16008AD5B6 /* URLProtocolMock.swift */; };
 		E1F78FB02B8A00A3008AD5B6 /* Photos.json in Resources */ = {isa = PBXBuildFile; fileRef = E1F78FAF2B8A00A3008AD5B6 /* Photos.json */; };
+		E1F78FB32B8A268F008AD5B6 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FB22B8A268F008AD5B6 /* ImageCache.swift */; };
+		E1F78FB52B8A4F90008AD5B6 /* ImageLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FB42B8A4F90008AD5B6 /* ImageLoaderMock.swift */; };
+		E1F78FB72B8A4FDC008AD5B6 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F78FB62B8A4FDC008AD5B6 /* ImageLoaderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,9 @@
 		E1DA1F872B88DFFD00F1CC35 /* Digii_AssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Digii_AssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DA1F8B2B88DFFD00F1CC35 /* Digii_AssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digii_AssessmentUITests.swift; sourceTree = "<group>"; };
 		E1DA1F8D2B88DFFD00F1CC35 /* Digii_AssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digii_AssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1E3132D2B8AF52900BB15E7 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
+		E1E313302B8AFA1000BB15E7 /* PhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUseCase.swift; sourceTree = "<group>"; };
+		E1E313322B8B059E00BB15E7 /* PhotosUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUseCaseTest.swift; sourceTree = "<group>"; };
 		E1F78F982B89CAD6008AD5B6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E1F78F9A2B89CB37008AD5B6 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		E1F78F9F2B89D85B008AD5B6 /* Publisher+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Network.swift"; sourceTree = "<group>"; };
@@ -65,6 +74,9 @@
 		E1F78FA92B89E7DB008AD5B6 /* NetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTest.swift; sourceTree = "<group>"; };
 		E1F78FAC2B89FD16008AD5B6 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		E1F78FAF2B8A00A3008AD5B6 /* Photos.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = Photos.json; sourceTree = "<group>"; };
+		E1F78FB22B8A268F008AD5B6 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		E1F78FB42B8A4F90008AD5B6 /* ImageLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderMock.swift; sourceTree = "<group>"; };
+		E1F78FB62B8A4FDC008AD5B6 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,7 @@
 		E1DA1F692B88DFFB00F1CC35 /* Digii_Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				E1E3132F2B8AF94A00BB15E7 /* UseCases */,
 				E1F78FA12B89DA79008AD5B6 /* Models */,
 				E1F78F962B89CA90008AD5B6 /* Services */,
 				E1DA1F6A2B88DFFB00F1CC35 /* AppDelegate.swift */,
@@ -147,9 +160,18 @@
 			path = Digii_AssessmentUITests;
 			sourceTree = "<group>";
 		};
+		E1E3132F2B8AF94A00BB15E7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				E1E313302B8AFA1000BB15E7 /* PhotosUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		E1F78F962B89CA90008AD5B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1F78FB12B8A261C008AD5B6 /* ImageLoader */,
 				E1F78F972B89CA99008AD5B6 /* Network */,
 			);
 			path = Services;
@@ -179,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				E1F78FA92B89E7DB008AD5B6 /* NetworkServiceTest.swift */,
+				E1E313322B8B059E00BB15E7 /* PhotosUseCaseTest.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -187,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				E1F78FAC2B89FD16008AD5B6 /* URLProtocolMock.swift */,
+				E1F78FB42B8A4F90008AD5B6 /* ImageLoaderMock.swift */,
+				E1E3132D2B8AF52900BB15E7 /* NetworkServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -197,6 +222,15 @@
 				E1F78FAF2B8A00A3008AD5B6 /* Photos.json */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		E1F78FB12B8A261C008AD5B6 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				E1F78FB22B8A268F008AD5B6 /* ImageCache.swift */,
+				E1F78FB62B8A4FDC008AD5B6 /* ImageLoaderService.swift */,
+			);
+			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,8 +366,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E313312B8AFA1000BB15E7 /* PhotosUseCase.swift in Sources */,
 				E1F78FA32B89E278008AD5B6 /* Photo.swift in Sources */,
 				E1DA1F6F2B88DFFB00F1CC35 /* ViewController.swift in Sources */,
+				E1F78FB72B8A4FDC008AD5B6 /* ImageLoaderService.swift in Sources */,
+				E1F78FB32B8A268F008AD5B6 /* ImageCache.swift in Sources */,
 				E1F78FA02B89D85B008AD5B6 /* Publisher+Network.swift in Sources */,
 				E1DA1F6B2B88DFFB00F1CC35 /* AppDelegate.swift in Sources */,
 				E1F78F992B89CAD6008AD5B6 /* NetworkService.swift in Sources */,
@@ -348,8 +385,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E3132E2B8AF52900BB15E7 /* NetworkServiceMock.swift in Sources */,
+				E1E313332B8B059E00BB15E7 /* PhotosUseCaseTest.swift in Sources */,
 				E1F78FAA2B89E7DB008AD5B6 /* NetworkServiceTest.swift in Sources */,
 				E1F78FAD2B89FD16008AD5B6 /* URLProtocolMock.swift in Sources */,
+				E1F78FB52B8A4F90008AD5B6 /* ImageLoaderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
