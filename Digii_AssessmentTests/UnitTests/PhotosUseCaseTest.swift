@@ -30,10 +30,10 @@ class PhotosUseCaseTest: XCTestCase {
         networkService.responses["/v2/list"] = photos
         
         useCase.fetchPhotos(page: 1)
-            .sinkToResult {
-                result = $0
+            .sink(receiveValue: { value in
+                result = value
                 expectation.fulfill()
-            }
+            })
             .store(in: &cancellables)
         
         waitForExpectations(timeout: 1.0, handler: nil)
