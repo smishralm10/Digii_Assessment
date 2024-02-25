@@ -27,11 +27,13 @@ final class PhotosUseCase: PhotosUseCaseType {
     
     func fetchPhotos(page: Int, limit: Int = 100) -> AnyPublisher<Result<Photos, Error>, Never> {
         return networkService
-            .load(Resource<Photos>.photos(page: 1))
+            .load(Resource<Photos>.photos(page: page))
             .map { .success($0) }
             .catch { error -> AnyPublisher<Result<Photos, Error>, Never> in
                 Just(.failure(error)).eraseToAnyPublisher()
             }
+            .subscribe(on: Scheduler.backgroundWorkScheduler)
+            .receive(on: Scheduler.mainScheduler)
             .eraseToAnyPublisher()
     }
     
@@ -42,6 +44,8 @@ final class PhotosUseCase: PhotosUseCaseType {
                       let downloadURL = URL(string: urlString) else { return Just(nil).eraseToAnyPublisher() }
                 return strongSelf.imageLoaderService.loadImage(from: downloadURL)
             }
+            .subscribe(on: Scheduler.backgroundWorkScheduler)
+            .receive(on: Scheduler.mainScheduler)
             .share()
             .eraseToAnyPublisher()
     }
