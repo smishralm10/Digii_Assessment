@@ -9,7 +9,7 @@ import Foundation
 
 extension Resource {
     static func photos(page: Int, limit: Int = 100) -> Resource<Photos> {
-        let url = APIConstants.baseURL.appendingPathComponent("/v2/list", conformingTo: .utf8PlainText)
+        let url = APIConstants.baseURL.appendingPathComponent("/v2/list", conformingTo: .url)
         
         let parameters: [String: CustomStringConvertible] = [
             "page": page,
