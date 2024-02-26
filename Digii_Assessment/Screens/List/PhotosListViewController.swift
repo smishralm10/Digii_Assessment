@@ -17,8 +17,18 @@ class PhotosListViewController: UICollectionViewController {
     private let selection = PassthroughSubject<String, Never>()
     private var cancellables = Set<AnyCancellable>()
     private var currentPage = 1
+    // A better way to do this would be through core data
+    private var photos = [PhotoViewModel]()
     
     private lazy var alertViewController = AlertViewController(nibName: nil, bundle: nil)
+    
+    private lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.tintColor = .label
+        searchController.searchBar.delegate = self
+        return searchController
+    }()
     
     private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
@@ -57,6 +67,7 @@ class PhotosListViewController: UICollectionViewController {
     
     private func configureUI() {
         title = NSLocalizedString("List", comment: "Photos List")
+        navigationItem.searchController = self.searchController
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.reuseIdentifier)
         
         loadingView.addSubview(activityIndicator)
@@ -196,4 +207,23 @@ extension PhotosListViewController {
         }
     }
     
+}
+
+// MARK: - Searching
+extension PhotosListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let photos = dataSource.snapshot().itemIdentifiers
+        let filteredPhotos = photos.filter { $0.author.contains(searchText)}
+        
+        update(with: filteredPhotos)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        update(with: photos)
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        self.photos = dataSource.snapshot().itemIdentifiers
+        return true
+    }
 }
