@@ -13,6 +13,8 @@ import UIKit.UIImage
 protocol PhotosUseCaseType {
     func fetchPhotos(page: Int, limit: Int) -> AnyPublisher<Result<Photos, Error>, Never>
     
+    func photoDetails(with id: String) -> AnyPublisher<Result<Photo, Error>, Never>
+    
     func loadImage(for photo: Photo) -> AnyPublisher<UIImage?, Never>
 }
 
@@ -30,6 +32,18 @@ final class PhotosUseCase: PhotosUseCaseType {
             .load(Resource<Photos>.photos(page: page))
             .map { .success($0) }
             .catch { error -> AnyPublisher<Result<Photos, Error>, Never> in
+                Just(.failure(error)).eraseToAnyPublisher()
+            }
+            .subscribe(on: Scheduler.backgroundWorkScheduler)
+            .receive(on: Scheduler.mainScheduler)
+            .eraseToAnyPublisher()
+    }
+    
+    func photoDetails(with id: String) -> AnyPublisher<Result<Photo, Error>, Never> {
+        return networkService
+            .load(Resource<Photo>.details(id: id))
+            .map { .success($0) }
+            .catch { error -> AnyPublisher<Result<Photo, Error>, Never> in
                 Just(.failure(error)).eraseToAnyPublisher()
             }
             .subscribe(on: Scheduler.backgroundWorkScheduler)

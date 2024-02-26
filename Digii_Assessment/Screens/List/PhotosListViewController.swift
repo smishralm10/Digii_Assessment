@@ -14,6 +14,7 @@ class PhotosListViewController: UICollectionViewController {
     private let viewModel: PhotosListViewModelType
     private let appear = PassthroughSubject<Void, Never>()
     private let paginate = PassthroughSubject<Int, Never>()
+    private let selection = PassthroughSubject<String, Never>()
     private var cancellables = Set<AnyCancellable>()
     private var currentPage = 1
     
@@ -75,7 +76,8 @@ class PhotosListViewController: UICollectionViewController {
         cancellables.removeAll()
         let input = PhotosListViewModelInput(
             appear: appear.eraseToAnyPublisher(),
-            paginate: paginate.eraseToAnyPublisher()
+            paginate: paginate.eraseToAnyPublisher(),
+            selection: selection.eraseToAnyPublisher()
         )
         
         let output = viewModel.transform(input: input)
@@ -127,6 +129,8 @@ private extension PhotosListViewController {
             subitems: [item]
         )
         
+        group.interItemSpacing = .fixed(10)
+        
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
         
@@ -170,7 +174,7 @@ private extension PhotosListViewController {
 extension PhotosListViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let snapshot = dataSource.snapshot()
-        // TODO: -
+        selection.send(snapshot.itemIdentifiers[indexPath.row].id)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     

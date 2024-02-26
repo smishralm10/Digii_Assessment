@@ -24,6 +24,12 @@ final class PhotosListViewModel: PhotosListViewModelType {
         cancellables.forEach { $0.cancel() }
         cancellables.removeAll()
         
+        input.selection
+            .sink { [unowned self] id in
+                self.navigator?.showDetails(forPhoto: id)
+            }
+            .store(in: &cancellables)
+        
         let photos = input.paginate
             .flatMap { [unowned self] page in
                 self.useCase.fetchPhotos(page: page, limit: 100)

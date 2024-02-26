@@ -17,4 +17,10 @@ extension Resource {
         ]
         return Resource<Photos>(url: url, parameters: parameters)
     }
+    
+    static func details(id: String) -> Resource<Photo> {
+        let url = APIConstants.baseURL.appendingPathComponent("/id/\(id)/info", conformingTo: .url)
+        
+        return Resource<Photo>(url: url)
+    }
 }

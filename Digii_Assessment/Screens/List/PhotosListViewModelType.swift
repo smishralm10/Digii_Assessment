@@ -11,6 +11,7 @@ import Combine
 struct PhotosListViewModelInput {
     let appear: AnyPublisher<Void, Never>
     let paginate: AnyPublisher<Int, Never>
+    let selection: AnyPublisher<String, Never>
 }
 
 enum PhotosListState {
