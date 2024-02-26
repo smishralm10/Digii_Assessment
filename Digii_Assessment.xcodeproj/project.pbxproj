@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1B40C1E2B8C43FC006EEC78 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B40C1D2B8C43FC006EEC78 /* AlertViewController.swift */; };
+		E1B40C202B8C450B006EEC78 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B40C1F2B8C450B006EEC78 /* AlertViewModel.swift */; };
 		E1DA1F6B2B88DFFB00F1CC35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F6A2B88DFFB00F1CC35 /* AppDelegate.swift */; };
 		E1DA1F6D2B88DFFB00F1CC35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F6C2B88DFFB00F1CC35 /* SceneDelegate.swift */; };
 		E1DA1F6F2B88DFFB00F1CC35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA1F6E2B88DFFB00F1CC35 /* ViewController.swift */; };
@@ -65,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1B40C1D2B8C43FC006EEC78 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		E1B40C1F2B8C450B006EEC78 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		E1DA1F672B88DFFB00F1CC35 /* Digii_Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digii_Assessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DA1F6A2B88DFFB00F1CC35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1DA1F6C2B88DFFB00F1CC35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1B40C1C2B8C43DB006EEC78 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E1B40C1D2B8C43FC006EEC78 /* AlertViewController.swift */,
+				E1B40C1F2B8C450B006EEC78 /* AlertViewModel.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		E1DA1F5E2B88DFFB00F1CC35 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +215,7 @@
 		E1E313342B8B345E00BB15E7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E1B40C1C2B8C43DB006EEC78 /* Alert */,
 				E1E3135C2B8BBC7A00BB15E7 /* Details */,
 				E1E313482B8B669100BB15E7 /* List */,
 			);
@@ -445,6 +459,7 @@
 				E1E313622B8BC6A300BB15E7 /* PhotoDetailsViewController.swift in Sources */,
 				E1E3133D2B8B4D8500BB15E7 /* PhotosListNavigator.swift in Sources */,
 				E1E3133B2B8B35B600BB15E7 /* PhotosListViewController.swift in Sources */,
+				E1B40C202B8C450B006EEC78 /* AlertViewModel.swift in Sources */,
 				E1E313312B8AFA1000BB15E7 /* PhotosUseCase.swift in Sources */,
 				E1E313592B8BAFAE00BB15E7 /* Scheduler.swift in Sources */,
 				E1F78FA32B89E278008AD5B6 /* Photo.swift in Sources */,
@@ -458,6 +473,7 @@
 				E1E3134D2B8B964B00BB15E7 /* FlowCoordinator.swift in Sources */,
 				E1E313432B8B512B00BB15E7 /* PhotoViewModel.swift in Sources */,
 				E1F78FB32B8A268F008AD5B6 /* ImageCache.swift in Sources */,
+				E1B40C1E2B8C43FC006EEC78 /* AlertViewController.swift in Sources */,
 				E1F78FA02B89D85B008AD5B6 /* Publisher+Network.swift in Sources */,
 				E1DA1F6B2B88DFFB00F1CC35 /* AppDelegate.swift in Sources */,
 				E1F78F992B89CAD6008AD5B6 /* NetworkService.swift in Sources */,

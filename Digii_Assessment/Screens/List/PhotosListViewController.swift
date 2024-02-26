@@ -18,6 +18,8 @@ class PhotosListViewController: UICollectionViewController {
     private var cancellables = Set<AnyCancellable>()
     private var currentPage = 1
     
+    private lazy var alertViewController = AlertViewController(nibName: nil, bundle: nil)
+    
     private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
         indicator.startAnimating()
@@ -91,21 +93,26 @@ class PhotosListViewController: UICollectionViewController {
     private func render(_ state: PhotosListState) {
         switch state {
         case .idle:
+            alertViewController.view.isHidden = true
             loadingView.isHidden = true
             update(with: [], animate: true)
         case .loading:
+            alertViewController.view.isHidden = true
             loadingView.isHidden = false
             update(with: [], animate: true)
         case .success(let photos):
             loadingView.isHidden = true
+            alertViewController.view.isHidden = true
             var items = dataSource.snapshot().itemIdentifiers
             items.append(contentsOf: photos)
             update(with: items)
         case .noResults:
-            print("no results")
+            alertViewController.view.isHidden = false
+            alertViewController.showNoResults()
         case .failure(let error):
+            alertViewController.view.isHidden = false
+            alertViewController.showDataLoadingError()
             loadingView.isHidden = true
-            print("error")
         }
     }
 }
