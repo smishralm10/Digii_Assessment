@@ -22,7 +22,7 @@ extension PhotoDetailsState: Equatable {
     static func == (lhs: PhotoDetailsState, rhs: PhotoDetailsState) -> Bool {
         switch (lhs, rhs) {
         case (.loading, .loading): return true
-        case (.success(let lhsPhoto), .success(let rhsPhoto)): return true
+        case (.success(let lhsPhoto), .success(let rhsPhoto)): return lhsPhoto == rhsPhoto
         case (.failure, .failure): return true
         default: return false
         }
