@@ -55,7 +55,6 @@ class PhotoDetailsViewController: UIViewController {
     }
     
     private func configureUI() {
-        
         view.addSubview(imageView)
         loadingView.addSubview(activityIndicator)
         view.addSubview(loadingView)
@@ -100,6 +99,7 @@ class PhotoDetailsViewController: UIViewController {
     }
     
     private func show(_ photoDetails: PhotoViewModel) {
+        title = "ID: \(photoDetails.id)"
         photoDetails.image
             .assign(to: \UIImageView.image, on: self.imageView)
             .store(in: &cancellables)
